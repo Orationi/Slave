@@ -91,6 +91,11 @@ namespace Orationi.Slave
 			throw new NotImplementedException();
 		}
 
+		public void ExecutePowerShell(string script)
+		{
+			throw new NotImplementedException();
+		}
+
 		private void StartPinging()
 		{
 			var token = _shutdown.Token;
