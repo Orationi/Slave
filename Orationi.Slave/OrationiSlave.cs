@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Orationi.CommunicationCore.Interfaces;
 using Orationi.CommunicationCore.Model;
+using Orationi.ModuleCore.Providers;
 
 namespace Orationi.Slave
 {
@@ -93,7 +94,8 @@ namespace Orationi.Slave
 
 		public void ExecutePowerShell(string script)
 		{
-			throw new NotImplementedException();
+			PowerShellProvider powerShellProvider = new PowerShellProvider();
+			powerShellProvider.InvokeScriptAsync(script);
 		}
 
 		private void StartPinging()
